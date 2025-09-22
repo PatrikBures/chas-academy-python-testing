@@ -1,21 +1,25 @@
-def get_int(a):
-    while True:
-        num = input(a)
-
-        try:
-            num = int(num)
-        except:
-            print("not an int")
-            continue
-        return num
-
-
 name = input("What is your name? ")
 
 print(f"Hello {name}! input some ints.")
 
-num1 = get_int("num1: ")
-num2 = get_int("num2: ")
+numbers = []
+current_num = 0
+while True:
+    num = input(f"num{current_num} (x to exit): ")
+    
+    if num == "x":
+        break
+    try:
+        num = int(num)
+    except:
+        print("not an int")
+        continue
 
-print(f"{num1} * {num2} = {num1 * num2}")
+    current_num += 1
+    numbers.append(num)
+
+print(sum(numbers))
+
+
+
 
