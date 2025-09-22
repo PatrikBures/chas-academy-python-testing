@@ -1,9 +1,16 @@
+def product(l):
+    result = 1
+    for num in l:
+        result = result * num
+    return result
+
 name = input("What is your name? ")
 
 print(f"Hello {name}! input some ints.")
 
 numbers = []
 current_num = 0
+
 while True:
     num = input(f"num{current_num} (x to exit): ")
     
@@ -18,8 +25,5 @@ while True:
     current_num += 1
     numbers.append(num)
 
-print(sum(numbers))
-
-
-
-
+print(f"sum: {sum(numbers)}")
+print(f"product: {product(numbers)}")
