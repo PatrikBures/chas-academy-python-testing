@@ -1,17 +1,13 @@
-def try_int(num):
-    try:
-        int(num)
-    except:
-        return False
-    return True
-
 def get_int(a):
     while True:
         num = input(a)
-        if try_int(num):
-            return int(num)
-        else:
+
+        try:
+            num = int(num)
+        except:
             print("not an int")
+            continue
+        return int(num)
 
 
 name = input("What is your name? ")
