@@ -7,7 +7,7 @@ def get_int(a):
         except:
             print("not an int")
             continue
-        return int(num)
+        return num
 
 
 name = input("What is your name? ")
